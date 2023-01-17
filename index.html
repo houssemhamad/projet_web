@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+  
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+  
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+  
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+</head>
+
+<body>
+ 
+  <!-- Hero Section Start -->
+  <div class="hero">
+    <nav>
+      <h2 class="logo">CV<span>.H</span></h2>
+      <ul>
+        <li><a href="#">accueil</a></li>
+        <li><a href="#about">a propos</a></li>
+        <li><a href="#etud">Education</a></li>
+        <li><a href="#abs">Stage</a></li>
+        <li><a href="pages/iit.html">avis sur IIT</a></li>
+        <li><a href="pages/quizz.html">quizz</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h4>HELLO, I am</h4>
+      <h1>HOUSSEM <span>HAMAD</span></h1>
+      <h3><span>software engineer student</span></h3>
+      <h4> From Sfax Tunisia  , 23 years old</h4>
+      <h4>3011 </h4>
+      <h4> +216 20 54 33 11 , houssemhamad54@gmail.com </h4>
+    </div>
+  </div>
+
+  <!-- About Section Start -->
+  <section id="about" class="about">
+    <div class="main">
+      <img src="img/main-img.png">
+      <div class="about-text">
+        <h2>A propos</h2>
+        <h5>
+          Developer
+        </h5>
+        <p>
+          Je suis un développeur Fullstack , spécialisé dans le Backend. J'ai les
+          compétences pour la réalisation d'identités visuelles, la création et la
+          gestion de sites web statiques et dynamiques pour tous types d'entreprises
+          à travers le monde.<br><br>
+         
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="etud" class="about">
+    <div class="main">
+      <img src="img/imgfac.png">
+      <div class="about-text">
+        <h2>Parcours educatif</h2>
+        <h5>
+          Cycle ingénieur 
+        </h5>
+        <p>
+          Je suis un développeur Fullstack , spécialisé dans le Backend. J'ai les
+          compétences pour la réalisation d'identités visuelles, la création et la
+          gestion de sites web statiques et dynamiques pour tous types d'entreprises
+          à travers le monde.<br><br>
+        </p>
+        <h5>
+          licence appliquée en technologie de l'informatique
+        </h5>
+        <p>
+          Je suis un développeur Fullstack , spécialisé dans le Backend. J'ai les
+          compétences pour la réalisation d'identités visuelles, la création et la
+          gestion de sites web statiques et dynamiques pour tous types d'entreprises
+          à travers le monde.<br><br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="abs" class="about">
+    <div class="main">
+      <img src="img/main-img1.png">
+      <div class="about-text">
+        <h2>Stage</h2>
+        <h5>
+          Projet de fin d'étude
+        </h5>
+        <p>
+          INFOSOFT , Sfax
+          lors de ce stage J'ai développé un module ERP pour la gestion de
+          production. ASP .Net Core 5 MVC
+        </p>
+        <h5>
+          Stage de perfectionnement
+        </h5>
+        <p>
+          Djagora Fablab
+          lors de stages,nous avons developper une IA avec python
+          ,L'estimation de la pose humaine (HPE) est un moyen d'identifier et
+          de classer les articulations du corps humain. Il s'agit essentiellement
+          d'un moyen de capturer un ensemble de coordonnées pour chaque
+          articulation, dont les coordonnées sont stocker dans une base de
+          données.
+
+        </p>
+        <h5>
+          Stage d'initiation
+        </h5>
+        <p>
+          BESTBUY Tunise
+          Société de vente et maintenance du matériel informatique,au cours
+          de ce stage je suis occupé à créer du contenu dans le site de vente
+          en ligne www.bestbuytunisie.com et de référencement web.
+
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="service">
+    <div class="title">
+      <h2>Centre d'interet</h2>
+    </div>
+
+    <div class="box">
+      <div class="card">
+        <i class="fas fa-camera"></i>
+        <h5>photogarphie</h5>
+        <div class="par">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+          <br><br>
+          <p style="text-align:center" :>
+            <a target="blank" class="button" href="pages/gallery.html">Read More</a>
+          </p>
+        </div>
+      </div>
+
+    <div class="card">
+        <i class="fas fa-user"></i>
+        <h5>Web Development</h5>
+        <div class="par">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br><br>
+          <p style="text-align:center":>
+            <a class="button" href="#">Read More</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-plane"></i>
+        <h5>Traveling</h5>
+        <div class="par">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br><br>
+          <p style="text-align:center":>
+            <a class="button" href="#">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <center><h2>DIPLOME</h2></center>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/img1.png" style="width:50%">
+        <div class="text">Diplome de baccalauréat</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/img2.png" style="width:50%">
+        <div class="text">Lettre de confidentialité </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/img3.png" style="width:50%">
+        <div class="text">Relevé du note licence</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+  <!-- Footer Start -->
+  <footer>
+    <p>HOUSSEM HAMAD</p>
+    <p>vous pouvez me trouver sur les plateformes suivantes :</p>
+    <div class="social">
+      <a target="_blank" href="https://www.facebook.com/houssem.hamad.3"><i class="fab fa-facebook-f"></i></a>
+      <a target="_blank" href="https://www.instagram.com/houc.em/"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

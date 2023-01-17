@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz by Houss</title>
+    <link rel="stylesheet" type="text/css" href="../style/quiz.css">
+
+</head>
+
+<body>
+    <section>
+    <div id="quiz">
+        <!-- Quiz questions will be inserted here -->
+    </div>
+    <button id="submit-button" onclick="submitAnswers()">Submit</button>
+    <div id="result"></div>
+    <script>
+        // Quiz questions and answers
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                answers: {
+                    a: "Paris",
+                    b: "London",
+                    c: "Rome"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                answers: {
+                    a: "Earth",
+                    b: "Jupiter",
+                    c: "Saturn"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "What is the smallest country in the world?",
+                answers: {
+                    a: "Vatican City",
+                    b: "Monaco",
+                    c: "Nauru"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "What is the most spoken language in the world?",
+                answers: {
+                    a: "English",
+                    b: "Mandarin",
+                    c: "Spanish"
+                },
+                correctAnswer: "b"
+            },
+            {
+                question: "Which animal is known as the 'king of the jungle'?",
+                answers: {
+                    a: "Lion",
+                    b: "Gorilla",
+                    c: "Tiger"
+                },
+                correctAnswer: "a"
+            }
+        ];
+
+        // Keep track of the score
+        let score = 0;
+
+        // Function to display the quiz questions
+        function showQuestions() {
+            let quizContent = "";
+            for (let i = 0; i < questions.length; i++) {
+                quizContent += "<h3>" + questions[i].question + "</h3>";
+                quizContent += "<ul>";
+                for (const key in questions[i].answers) {
+                    quizContent += "<li>" + "<input type='radio' name='question" + i + "' value='" + key + "'>" + key + ": " + questions[i].answers[key] + "</li>";
+                }
+                quizContent += "</ul>";
+            }
+            document.getElementById("quiz").innerHTML = quizContent;
+        }
+
+        // Function to check the answers and display the result
+        function submitAnswers() {
+            for (let i = 0; i < questions.length; i++) {
+                const userAnswer = document.querySelector("input[name='question" + i + "']:checked").value;
+                if (userAnswer === questions[i].correctAnswer) {
+                    score++;
+                }
+            }
+            document.getElementById("result").innerHTML = "Your final score is " + score + " out of " + questions.length + ".";
+        }
+
+        // Call the showQuestions function to display the quiz
+        showQuestions();
+    </script>
+    </section>
+</body>
+
+</html>
